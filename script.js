@@ -30,8 +30,6 @@ function getGitInfo() {
         userImage.src = data.avatar_url
         userLogin.textContent = data.login
     })
-
-    // console.log(url)
 }
 
 getGitInfo()
