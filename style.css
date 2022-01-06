@@ -5,6 +5,7 @@
 
 html, 
 body {
+    --orange: #dc2f02;
     --black: hsl(240, 6%, 13%);
     --gray: hsl(240, 9%, 89%);
 
@@ -19,9 +20,10 @@ body {
 }
 
 main {
-    background: url(images/background.svg);
-    width: 375px;
-    height: 812px;
+    background: url(images/background.svg) no-repeat center/cover;
+    width: 100vw;
+    min-height: 812px;
+    height: 100vh;
 }
 
 .container {
@@ -39,8 +41,8 @@ main {
 
 .avatar span {
     position: absolute;
-    top: -15px;
-    z-index: 1;
+    top: 50px;
+    /* z-index: 1; */
 }
 
 .avatar > img {
@@ -52,12 +54,14 @@ main {
 }
 
 h1 {
+    color: var(--orange);
     font-size: 1.5rem;
     margin-top: 1.5rem;
 }
 
 a {
-    color: #9e2a2b;
+    color: var(--gray);
+    font-weight: 600;
     text-decoration: none;
     margin-top: 0.35rem;
     display: flex;
@@ -76,4 +80,20 @@ ul {
     display: flex;
     gap: 0.5rem;
     justify-content: center;
+}
+
+@media (min-width: 720px) {
+    .avatar {
+        width: 10rem;
+        margin: 4rem auto 0;
+        position: relative;
+    }
+}
+
+@media (min-width: 960px) {
+    .avatar {
+        width: 10rem;
+        margin: 6rem auto 0;
+        position: relative;
+    }
 }
